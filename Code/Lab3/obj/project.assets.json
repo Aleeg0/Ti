@@ -8,19 +8,19 @@
     "net9.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Aleego\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BSUIR\\year2\\part2\\TI\\Labs\\Lab3\\Lab3.csproj",
+      "projectUniqueName": "D:\\BSUIR\\year2\\part2\\Ti\\Ti\\Code\\Lab3\\Lab3.csproj",
       "projectName": "Lab3",
-      "projectPath": "D:\\BSUIR\\year2\\part2\\TI\\Labs\\Lab3\\Lab3.csproj",
-      "packagesPath": "C:\\Users\\Aleego\\.nuget\\packages\\",
-      "outputPath": "D:\\BSUIR\\year2\\part2\\TI\\Labs\\Lab3\\obj\\",
+      "projectPath": "D:\\BSUIR\\year2\\part2\\Ti\\Ti\\Code\\Lab3\\Lab3.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\BSUIR\\year2\\part2\\Ti\\Ti\\Code\\Lab3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Aleego\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0-windows"
@@ -44,7 +44,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net9.0-windows7.0": {
@@ -68,7 +68,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -10,6 +10,10 @@ namespace Lab3;
 /// </summary>
 public partial class MainWindow : Window
 {
+    private const int MinP = 3;
+    private const int MinQ = 3511;
+    private const int MinB = 0;
+    private const int MaxB = 10533;
     private BigInteger[] _fileContent = [];
     private BigInteger[] _result = [];
     
@@ -25,7 +29,7 @@ public partial class MainWindow : Window
         BigInteger q = int.Parse(TbInputQ.Text);
         BigInteger b = int.Parse(TbInputB.Text);
         
-        /*if (!Validator.IsCorrectParam(p, MinP, "p", out var error))
+        if (!Validator.IsCorrectParam(p, MinP, "p", out var error))
         {
             MessageBox.Show(error, "ой-йой", MessageBoxButton.OK, MessageBoxImage.Error);
             return;
@@ -37,11 +41,11 @@ public partial class MainWindow : Window
             return;
         }
         
-        if (!Validator.IsCorrectParamB(b, MinB, 10533, "b", out error))
+        if (!Validator.IsCorrectParamB(b, MinB, MaxB, "b", out error))
         {
             MessageBox.Show(error, "ой-йой", MessageBoxButton.OK, MessageBoxImage.Error);
             return;
-        }*/
+        }
         
         BigInteger n = p * q;
         // шифруем
@@ -157,41 +161,44 @@ public partial class MainWindow : Window
         
         if (openFileDialog.ShowDialog() == true)
         {
-            // если было выбрано шифрование, значит записываем как зашифрованный
-            if (RbCrypto.IsChecked ?? false)
+            byte[] buffer = _result
+                    .Select(message => message.ToByteArray().First())
+                    .ToArray();
+            
+            try
             {
-                try
-                {
-                    // записываем в файл 
-                    await FileService.SaveFile(openFileDialog.FileName, _result);
-                }
-                catch
-                {
-                    MessageBox.Show("Ошибка при сохранении в файла!", 
-                        "Ошибка", 
-                        MessageBoxButton.OK, 
-                        MessageBoxImage.Error);
-                } 
+                // записываем в файл 
+                await FileService.SaveFile(openFileDialog.FileName, buffer);
             }
-            // иначе записываем на байты
-            else
+            catch
             {
-                byte[] buffer = _result
-                        .Select(message => message.ToByteArray().First())
-                        .ToArray();
-                
-                try
-                {
-                    // записываем в файл 
-                    await FileService.SaveFile(openFileDialog.FileName, buffer);
-                }
-                catch
-                {
-                    MessageBox.Show("Ошибка при сохранении в файла!", 
-                        "Ошибка", 
-                        MessageBoxButton.OK, 
-                        MessageBoxImage.Error);
-                } 
+                MessageBox.Show("Ошибка при сохранении в файла!", 
+                    "Ошибка", 
+                    MessageBoxButton.OK, 
+                    MessageBoxImage.Error);
+            } 
+        }
+    }
+
+    private async void BtnSaveEncryptedFile_OnClick(object sender, RoutedEventArgs e)
+    {
+        var openFileDialog = new Microsoft.Win32.SaveFileDialog();
+        
+        openFileDialog.Title = "Выберите файл для открытия";
+
+        if (openFileDialog.ShowDialog() == true)
+        {
+            try
+            {
+                // записываем в файл 
+                await FileService.SaveFile(openFileDialog.FileName, _result);
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при сохранении в файла!",
+                    "Ошибка",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
             }
         }
     }

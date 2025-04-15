@@ -35,10 +35,10 @@ public static class Validator
             error += $"{paramName} должен быть больше {min}!\r\n";
         }
         
-        if (number > max)
+        /*if (number > max)
         {
             error += $"{paramName} должен быть меньше {max}!\r\n";
-        }
+        }*/
 
         return error.Equals(string.Empty);
     }

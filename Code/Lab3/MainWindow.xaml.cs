@@ -10,8 +10,8 @@ namespace Lab3;
 /// </summary>
 public partial class MainWindow : Window
 {
-    private const int MinP = 3;
-    private const int MinQ = 3511;
+    private const int MinP = 0;
+    private const int MinQ = 0;
     private const int MinB = 0;
     private const int MaxB = 10533;
     private BigInteger[] _fileContent = [];

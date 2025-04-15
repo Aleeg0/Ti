@@ -23,13 +23,13 @@
                 
                 <!-- Input Fields -->
                 <StackPanel Grid.Column="0">
-                    <Label Content="Введите p (p > 3)" FontSize="14" Margin="0,5"/>
+                    <Label Content="Введите p" FontSize="14" Margin="0,5"/>
                     <TextBox x:Name="TbInputP" FontSize="14" Margin="0,0,0,10" TextChanged="tb_input_TextChanged" PreviewTextInput="tb_input_PreviewTextInput" PreviewKeyDown="tb_input_PreviewKeyDown"/>
                     
-                    <Label Content="Введите q (q > 3511)" FontSize="14" Margin="0,5"/>
+                    <Label Content="Введите q" FontSize="14" Margin="0,5"/>
                     <TextBox x:Name="TbInputQ" FontSize="14" Margin="0,0,0,10" TextChanged="tb_input_TextChanged" PreviewTextInput="tb_input_PreviewTextInput" PreviewKeyDown="tb_input_PreviewKeyDown"/>
                     
-                    <Label Content='Введите b (0 &lt; q &lt; 10533)' FontSize="14" Margin="0,5"/>
+                    <Label Content='Введите b' FontSize="14" Margin="0,5"/>
                     <TextBox x:Name="TbInputB" FontSize="14" Margin="0,0,0,10" TextChanged="tb_input_TextChanged" PreviewTextInput="tb_input_PreviewTextInput" PreviewKeyDown="tb_input_PreviewKeyDown"/>
                 </StackPanel>
                 

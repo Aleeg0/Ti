@@ -1,0 +1,3 @@
+This is a short sample text for testing purposes.  
+It contains just a couple of !!FILECURREPTED!! lines to verify basic layout behavior.
+8421

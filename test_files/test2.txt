@@ -1,0 +1,10 @@
+This is a longer piece of sample text intended for more thorough testing.  
+It spans multiple lines and allows you to observe how the interface handles larger blocks of content.  
+Sometimes, layout issues only appear when enough text is present to force wrapping or scrolling.  
+By including this amount of content, you can ensure proper spacing, alignment, and readability.  
+Each line here simulates part of a paragraph or a typical block of user input.  
+You might also want to check font scaling and responsiveness with such content.  
+Make sure line height and padding are visually comfortable.  
+Consider how this text behaves in dark mode or different screen resolutions.  
+This is especially useful when testing UI components like text boxes or labels.  
+End of sample.
